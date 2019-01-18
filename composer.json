@@ -1,5 +1,5 @@
 {
-  "name": "cjp2600/bim-core",
+  "name": "koreychenko/bim-core",
   "description": "Bitrix db migration core libs",
   "keywords": [
     "bitrix",
@@ -24,6 +24,10 @@
     {
       "name": "Andrey Verevkin",
       "email": "averevkin@indigo-trg.com"
+    },
+    {
+      "name": "Max koreychenko",
+      "email": "koreychenko@gmail.com"
     }
   ],
   "require": {
@@ -32,9 +36,9 @@
     "alchemy/zippy": ">=0.3.5"
   },
   "support": {
-    "email": "icjp2600@gmail.com",
-    "docs": "https://github.com/cjp2600/bim-core",
-    "source": "https://github.com/cjp2600/bim-core"
+    "email": "koreychenko@gmail.com",
+    "docs": "https://github.com/koreychenko/bim-core",
+    "source": "https://github.com/koreychenko/bim-core"
   },
   "autoload": {
     "classmap": [
