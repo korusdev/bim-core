@@ -13,8 +13,24 @@ class Config
     protected $data = array();
     protected $cache = array();
 
-    public function __construct($path) {
-        $this->data = $this->parse($path);
+    public function __construct($type = "migrations") {
+
+        switch ($type) {
+            case "commands":
+                $defaultPath = __DIR__ . "/../config/commands.json";
+                break;
+            default:
+                $defaultPath = __DIR__ . "/../config/bim.json";
+        }
+
+        $config = \Bitrix\Main\Config\Configuration::getInstance();
+        $configMigrations = $config->get($type);
+
+        if ($configMigrations) {
+            $this->data = $configMigrations;
+        } else {
+            $this->data = $this->parse($defaultPath);
+        }
     }
 
     public function get($key, $default = null) {
@@ -39,8 +55,9 @@ class Config
     }
 
     protected function parse($path) {
+        var_dump($path);
         $data = json_decode(file_get_contents($path), true);
-
+        
         if (function_exists('json_last_error_msg')) {
             $error_message = json_last_error_msg();
         } else {

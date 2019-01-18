@@ -205,7 +205,7 @@ abstract class BaseCommand extends Command
             }
             $path = $this->migrationPath;
         } else {
-            $conf = new Config(__DIR__ . "/../config/bim.json");
+            $conf = new Config();
             $migration_path = $conf->get("migration_path");
             $path = ($full) ? $_SERVER["DOCUMENT_ROOT"] . "/" . $migration_path . "/" : $migration_path;
         }
@@ -337,7 +337,7 @@ abstract class BaseCommand extends Command
      */
     public function logging($input_array = array(), $type = "up", $file_name = 'bim.log')
     {
-        $conf = new Config(__DIR__ . "/../config/bim.json");
+        $conf = new Config();
         $logging_path = $conf->get("logging_path");
         $return_message = " >> php bim " . $type . " \n";
         $return_message .= date('d.m.Y H:i:s') . "\n";

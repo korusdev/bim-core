@@ -101,6 +101,22 @@ php composer.phar update
 php bim init
 ```
 
+Настройки параметров расположения файлов миграций, логов, и названия таблицы с миграциями.
+По умолчанию, данные берутся из `vendor/koreychenko/bim-core/src/config/bim.json`, но их можно переопределить.
+Для этого необходимо добавить в файл `/bitrix/.settings.php` следующую секцию:
+
+```php
+'migrations' => [
+      "value" => [
+          'migration_path' => 'local/migrations',
+          'logging_path' => '_log/bim',
+          'migration_table' => 'bim_migrations',
+      ],
+      'readonly' => true,
+  ]
+```
+
+Все пути прописываются относительно `$_SERVER['DOCUMENT_ROOT']`
 
 # 3 <a name="up"></a>Выполнение миграций [BIM UP]
 

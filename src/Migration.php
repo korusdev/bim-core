@@ -18,7 +18,7 @@ class Migration
      */
     public static function init()
     {
-        $conf = new Config(__DIR__ . "/config/commands.json");
+        $conf = new Config("commands");
         $console = new Console($conf->get("commands"));
         # run commands
         $console->run();
