@@ -54,8 +54,7 @@ class Config
         return ($this->cache[$key] = $root);
     }
 
-    protected function parse($path) {
-        var_dump($path);
+    protected function parse($path) {        
         $data = json_decode(file_get_contents($path), true);
         
         if (function_exists('json_last_error_msg')) {
