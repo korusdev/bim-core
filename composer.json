@@ -1,5 +1,5 @@
 {
-  "name": "koreychenko/bim-core",
+  "name": "korusdev/bim-core",
   "description": "Bitrix db migration core libs",
   "keywords": [
     "bitrix",
@@ -37,8 +37,8 @@
   },
   "support": {
     "email": "koreychenko@gmail.com",
-    "docs": "https://github.com/koreychenko/bim-core",
-    "source": "https://github.com/koreychenko/bim-core"
+    "docs": "https://github.com/korusdev/bim-core",
+    "source": "https://github.com/korusdev/bim-core"
   },
   "autoload": {
     "classmap": [
